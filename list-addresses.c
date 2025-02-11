@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int var3;
+
 int add(int a, int b){
     return a + b;
 }
@@ -13,9 +14,9 @@ int main(int argc, char *argv[]) {
     char *ptr_var2 = var2;
     int *ptr_var3 = &var3;
 
-    printf("stack variable: 0x%012lx\n", ptr_var1);
+    printf("stack variable: %p\n", &var1);
     printf("initialized data: %p\n", &var2);
-    printf("uninitialized data: 0x%012lx\n", ptr_var2);
+    printf("uninitialized data: %p\n", ptr_var3);
     printf("main: %p\n", &main);
     printf("function: %p\n", &add);
 
